@@ -48,7 +48,7 @@ export default function Home() {
                 {/* Ebook Cover with Shadow */}
                 <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow">
                   <img 
-                    src="/manus-storage/ebook-cover_24288df7.png"
+                    src="/manus-storage/ebook-cover-new_13920b1a.png"
                     alt="Sem Tempo, Sem Desculpa - Ebook" 
                     className="w-full h-auto max-w-sm"
                   />
