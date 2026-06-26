@@ -1,24 +1,47 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Router as WouterRouter, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
+import { useEffect } from "react";
 
+function GithubPagesRedirect() {
+  const [, setLocation] = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get("redirect");
+
+    if (!redirect) return;
+
+    params.delete("redirect");
+    const cleanSearch = params.toString();
+    const cleanedUrl = `${window.location.pathname}${cleanSearch ? `?${cleanSearch}` : ""}${window.location.hash}`;
+
+    window.history.replaceState(null, "", cleanedUrl);
+    setLocation(redirect, { replace: true });
+  }, [setLocation]);
+
+  return null;
+}
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/privacidade"} component={PrivacyPolicy} />
-      <Route path={"/termos"} component={TermsOfUse} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <WouterRouter>
+      <GithubPagesRedirect />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/privacidade"} component={PrivacyPolicy} />
+        <Route path={"/termos"} component={TermsOfUse} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </WouterRouter>
   );
 }
 

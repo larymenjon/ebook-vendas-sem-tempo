@@ -60,13 +60,15 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <div className="min-h-screen bg-[#f7f4ec] text-gray-900">
       <nav className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur-md">
         <div className="container flex h-18 items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/favicon.png"
+              src={`${assetBase}favicon.png`}
               alt="Sem Tempo, Sem Desculpa"
               className="h-10 w-10 rounded-full ring-1 ring-black/10"
             />
@@ -170,7 +172,7 @@ export default function Home() {
                     Alimentacao pratica
                   </div>
                   <img
-                    src="/hero-book-cover.png"
+                    src={`${assetBase}hero-book-cover.png`}
                     alt="Capa do ebook Sem Tempo, Sem Desculpa"
                     className="h-auto w-full rounded-[1.5rem] object-contain"
                   />

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecionando...</title>
+    <script>
+      (function () {
+        var parts = window.location.pathname.split("/");
+        var base = parts.length > 2 ? "/" + parts[1] : "";
+        var path = window.location.pathname.slice(base.length) || "/";
+        var target = base + "/?redirect=" + encodeURIComponent(path + window.location.search + window.location.hash);
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
