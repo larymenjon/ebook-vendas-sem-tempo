@@ -34,7 +34,7 @@ export default function Home() {
             <a href="#garantia" className="text-sm text-gray-600 hover:text-green-600 transition">Garantia</a>
             <a href="#cta" className="text-sm text-gray-600 hover:text-green-600 transition">Comprar</a>
           </div>
-          <Button className="bg-green-600 hover:bg-green-700 text-white">Comprar Agora</Button>
+          <Button className="bg-green-600 hover:bg-green-700 text-white">Comprar Agora - R$ 25,90</Button>
         </div>
       </nav>
 
@@ -78,7 +78,7 @@ export default function Home() {
                   size="lg" 
                   className="bg-green-600 hover:bg-green-700 text-white text-lg h-14 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all"
                 >
-                  Comprar Agora - R$ 37 <ArrowRight className="w-5 h-5 ml-2" />
+                  Comprar Agora - R$ 25,90 <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
                 <Button 
                   size="lg" 
@@ -91,6 +91,9 @@ export default function Home() {
 
               <p className="text-sm text-gray-500 pt-4">
                 ✓ 7 dias de garantia de reembolso | ✓ Acesso imediato | ✓ Suporte por email
+              </p>
+              <p className="text-sm font-semibold text-orange-600 pt-2 animate-pulse">
+                ⏰ Oferta por tempo limitado - Primeiros 50 clientes!
               </p>
             </div>
 
@@ -446,18 +449,24 @@ export default function Home() {
             <p className="text-xl text-green-100">
               Acesso imediato ao ebook + 15 receitas bônus + suporte por email
             </p>
+            <p className="text-lg font-bold text-white mt-3">
+              🎁 PREÇO ESPECIAL: R$ 25,90 (Oferta por tempo limitado!)
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-white text-green-600 hover:bg-green-50 text-lg h-14 px-8 rounded-lg font-bold shadow-lg"
+                className="bg-white text-green-600 hover:bg-green-50 text-lg h-14 px-8 rounded-lg font-bold shadow-lg animate-pulse"
               >
-                Comprar Agora - R$ 37 <ArrowRight className="w-5 h-5 ml-2" />
+                Comprar Agora - R$ 25,90 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
 
             <p className="text-sm text-green-100">
               ✓ Garantia de 7 dias | ✓ Acesso imediato | ✓ Sem compromisso
+            </p>
+            <p className="text-sm text-green-100 italic mt-2">
+              ⏰ Apenas para os primeiros 50 clientes!
             </p>
 
             <div className="pt-8 border-t border-green-500">
