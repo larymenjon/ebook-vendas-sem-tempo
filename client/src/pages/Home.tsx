@@ -44,22 +44,32 @@ export default function Home() {
       </div>
 
       {/* Hero Section - High Conversion */}
-      <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-b from-white to-amber-50">
-        <div className="container">
+      <section className="relative overflow-hidden py-12 md:py-20 bg-white">
+        {/* Dynamic Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Floating circles - top left */}
+          <div className="absolute -top-20 -left-20 w-64 h-64 bg-green-100 rounded-full opacity-30 blur-3xl animate-pulse"></div>
+          {/* Floating circles - bottom right */}
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-100 rounded-full opacity-20 blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          {/* Accent line */}
+          <div className="absolute top-1/4 right-0 w-1 h-1/2 bg-gradient-to-b from-green-300 via-transparent to-transparent opacity-40"></div>
+        </div>
+
+        <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Ebook Mockup - MAIN FOCUS */}
             <div className="flex justify-center md:justify-start order-2 md:order-1">
-              <div className="relative">
-                {/* Ebook Mockup with Shadow */}
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow">
+              <div className="relative group">
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-orange-300 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                {/* Ebook Mockup with Advanced Shadow */}
+                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform group-hover:scale-105">
                   <img 
                     src="/manus-storage/ebook-mockup-responsive_3715a4e3.png"
                     alt="Sem Tempo, Sem Desculpa - Mockup Responsivo" 
                     className="w-full h-auto max-w-sm"
                   />
                 </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-green-600 rounded-full opacity-20 blur-2xl"></div>
               </div>
             </div>
 
