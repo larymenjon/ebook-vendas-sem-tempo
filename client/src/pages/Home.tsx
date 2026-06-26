@@ -38,18 +38,23 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* Urgency Banner - Full Width */}
+      <div className="w-full bg-red-600 text-white py-3 px-4 text-center font-bold text-lg md:text-xl animate-pulse">
+        🔥 OFERTA POR TEMPO LIMITADO - PRIMEIROS 50 CLIENTES! 🔥
+      </div>
+
       {/* Hero Section - High Conversion */}
       <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-b from-white to-amber-50">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Left: Ebook Cover - MAIN FOCUS */}
+            {/* Left: Ebook Mockup - MAIN FOCUS */}
             <div className="flex justify-center md:justify-start order-2 md:order-1">
               <div className="relative">
-                {/* Ebook Cover with Shadow */}
+                {/* Ebook Mockup with Shadow */}
                 <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow">
                   <img 
-                    src="/manus-storage/ebook-cover-new_13920b1a.png"
-                    alt="Sem Tempo, Sem Desculpa - Ebook" 
+                    src="/manus-storage/ebook-mockup-responsive_3715a4e3.png"
+                    alt="Sem Tempo, Sem Desculpa - Mockup Responsivo" 
                     className="w-full h-auto max-w-sm"
                   />
                 </div>
@@ -60,10 +65,7 @@ export default function Home() {
 
             {/* Right: CTA and Benefits */}
             <div className="space-y-6 order-1 md:order-2">
-              {/* Urgency Badge */}
-              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full font-semibold text-sm">
-                <span className="animate-pulse">🔥</span> Oferta Limitada - Primeiros 50
-              </div>
+
 
               {/* Main Headline */}
               <div className="space-y-3">
