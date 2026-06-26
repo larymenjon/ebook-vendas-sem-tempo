@@ -38,87 +38,77 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section - High Conversion */}
-      <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-b from-white to-amber-50">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-16 md:py-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Left: Ebook Cover - MAIN FOCUS */}
-            <div className="flex justify-center md:justify-start order-2 md:order-1">
-              <div className="relative">
-                {/* Ebook Cover with Shadow */}
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow">
-                  <img 
-                    src="/manus-storage/ebook-cover_24288df7.png"
-                    alt="Sem Tempo, Sem Desculpa - Ebook" 
-                    className="w-full h-auto max-w-sm"
-                  />
-                </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-green-600 rounded-full opacity-20 blur-2xl"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Text */}
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <p className="text-orange-600 font-poppins font-semibold text-sm uppercase tracking-wide">
+                  ✨ Protocolo de Alimentação Saudável
+                </p>
+                <h1 className="font-poppins font-bold text-5xl md:text-6xl leading-tight text-gray-900">
+                  Você tenta emagrecer, mas a vida não deixa?
+                </h1>
               </div>
+              
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Este ebook foi criado para a sua vida real. Com refeições rápidas, estratégias que cabem em 10 minutos e um protocolo que funciona mesmo quando tudo dá errado.
+              </p>
+
+              <div className="space-y-3 pt-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Fórmula do Prato Funcional (refeições em 10 minutos)</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Cardápio de 21 dias pronto para usar</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Estratégias para quando tudo dá errado</span>
+                </div>
+              </div>
+
+              <div className="pt-6 flex flex-col sm:flex-row gap-4">
+                <Button 
+                  id="cta"
+                  size="lg" 
+                  className="bg-green-600 hover:bg-green-700 text-white text-lg h-14 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                >
+                  Comprar Agora - R$ 25,90 <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-green-600 text-green-600 hover:bg-green-50 text-lg h-14 px-8 rounded-lg"
+                >
+                  Conhecer Mais
+                </Button>
+              </div>
+
+              <p className="text-sm text-gray-500 pt-4">
+                ✓ 7 dias de garantia de reembolso | ✓ Acesso imediato | ✓ Suporte por email
+              </p>
+              <p className="text-sm font-semibold text-orange-600 pt-2 animate-pulse">
+                ⏰ Oferta por tempo limitado - Primeiros 50 clientes!
+              </p>
             </div>
 
-            {/* Right: CTA and Benefits */}
-            <div className="space-y-6 order-1 md:order-2">
-              {/* Urgency Badge */}
-              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full font-semibold text-sm">
-                <span className="animate-pulse">🔥</span> Oferta Limitada - Primeiros 50
+            {/* Right: Image */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029787143/NdyFA2XYVxP2w33bs4xSjf/hero-meal-prep-QyVyb6HFpV5aL3PKuzYMdB.webp"
+                  alt="Preparação de refeição saudável" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-
-              {/* Main Headline */}
-              <div className="space-y-3">
-                <h1 className="font-poppins font-bold text-4xl md:text-5xl leading-tight text-gray-900">
-                  Emagreça sem abrir mão da sua vida
-                </h1>
-                <p className="text-xl text-gray-600 font-semibold">
-                  O protocolo prático para quem tem rotina corrida
-                </p>
-              </div>
-
-              {/* Main Benefits */}
-              <div className="space-y-3 bg-white p-6 rounded-xl border-2 border-green-200">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✓</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Refeições em 10 minutos</p>
-                    <p className="text-sm text-gray-600">Fórmula do Prato Funcional pronta para usar</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✓</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Cardápio de 21 dias</p>
-                    <p className="text-sm text-gray-600">Semanas 1, 2 e 3 com refeições prontas</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✓</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">15 receitas rápidas</p>
-                    <p className="text-sm text-gray-600">Bônus com receitas de até 15 minutos</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Main CTA */}
-              <Button 
-                id="cta"
-                size="lg" 
-                className="w-full bg-green-600 hover:bg-green-700 text-white text-lg h-16 rounded-lg shadow-xl hover:shadow-2xl transition-all font-bold animate-pulse"
-              >
-                🎁 COMPRAR AGORA - R$ 25,90
-              </Button>
-
-              {/* Trust Elements */}
-              <div className="space-y-2 text-center text-sm">
-                <p className="text-gray-700 font-semibold">✓ Garantia de 7 dias | ✓ Acesso Imediato | ✓ Sem Risco</p>
-                <p className="text-orange-600 font-semibold">⏰ Apenas para os primeiros 50 clientes!</p>
+              <div className="absolute -bottom-4 -right-4 bg-orange-600 text-white p-6 rounded-xl shadow-lg max-w-xs">
+                <p className="font-poppins font-bold text-lg mb-2">Consistência imperfeita</p>
+                <p className="text-sm">bate perfeição ocasional toda vez</p>
               </div>
             </div>
           </div>
